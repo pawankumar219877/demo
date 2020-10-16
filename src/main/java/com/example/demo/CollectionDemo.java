@@ -14,7 +14,7 @@ public class CollectionDemo {
         //  CommonBuilder<Student>   student   = new CommonBuilder<Student>(student).withName("Pawan").withBranch("CSE").withContactNo("8147152268").buid();
         Student  student[]   ={
                 new StudentBuilder()
-                 .withName("Pawan").withBranch("CSE").withContactNo("8147152268").build(),
+                        .withName("Pawan").withBranch("CSE").withContactNo("8147152268").build(),
                 new StudentBuilder()
                         .withName("Ram").withBranch("It").withContactNo("4242152268").build(),
                 new StudentBuilder()
@@ -22,19 +22,28 @@ public class CollectionDemo {
 
         };
 
-         List<Student> st= new ArrayList<>();
-         st.add(student[0]);
-         st.add(student[1]);
-         st.add(student[2]);
+        List<Student> st= new ArrayList<>();
+        st.add(student[0]);
+        st.add(student[1]);
+        st.add(student[2]);
 
 
-         List<Student>   getonlybranch=  st.stream().map(Student::getBranch).collect(Collectors.asList());
-         System.out.println(st);
+        List<String>   getonlybranch=  st.stream().map(Student::getBranch).collect(Collectors.toList());
+        System.out.println(getonlybranch);
 
+
+
+
+        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+        List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+        System.out.println(filtered);
+        //   System.out.println(st);
         String str[] = { "dsd","dsfsg", "efqwrqwr" };
-        List<String> l = new Arrays.asList("one", "two");
+        Integer a[] = new Integer[] { 10, 20, 30, 40 };
+        // getting the list view of Array
+        List<Integer> list = Arrays.asList(a);
         String version = System.getProperty("java.version");
-
+        System.out.println(list);
         System.out.println(version);
 
     }
