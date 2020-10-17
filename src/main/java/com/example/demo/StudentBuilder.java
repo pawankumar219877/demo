@@ -1,7 +1,7 @@
 package com.example.demo;
 
 public class StudentBuilder {
-    public Student student= new Student();;
+    public Student student;
     private long RollNo;
     private long RegNo;
     private String Name;
@@ -10,8 +10,8 @@ public class StudentBuilder {
     private String Branch;
 
 
-    public void StudentBuilder() {
-
+    public  StudentBuilder() {
+        student= new Student();
     }
 
     StudentBuilder withRollNo(final long RollNo) {

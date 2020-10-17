@@ -34,7 +34,7 @@ public class CollectionDemo {
 
 
 
-        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+        /*List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
         List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
         System.out.println(filtered);
         //   System.out.println(st);
@@ -44,7 +44,7 @@ public class CollectionDemo {
         List<Integer> list = Arrays.asList(a);
         String version = System.getProperty("java.version");
         System.out.println(list);
-        System.out.println(version);
+        System.out.println(version);  */
 
     }
 
