@@ -19,7 +19,6 @@ public class CollectionDemo {
                         .withName("Ram").withBranch("It").withContactNo("4242152268").build(),
                 new StudentBuilder()
                         .withName("Shyam").withBranch("EEE").withContactNo("3252352353").build()
-
         };
 
         List<Student> st= new ArrayList<>();
@@ -30,7 +29,6 @@ public class CollectionDemo {
 
         List<String>   getonlybranch=  st.stream().map(Student::getBranch).collect(Collectors.toList());
         System.out.println(getonlybranch);
-
 
 
 
